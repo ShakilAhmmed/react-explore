@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import UserTrComponent from "./UserTrComponent"
 import axios from "axios";
 import { withAsync } from "../../../helpers/withAsync";
 import { getUsersService } from "../../../services/api/usersApi";
+import { SettingsContext } from "../../../contexts/SettingsContext";
 
 function UserListComponent() {
     const [userList, setUsers] = useState([]);
@@ -27,8 +28,11 @@ function UserListComponent() {
         getUsers();
     }, []);
 
+    const settingsDefault = useContext(SettingsContext);
+    console.log(settingsDefault.value);
     return (
         <>
+
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">USER LIST</h6>

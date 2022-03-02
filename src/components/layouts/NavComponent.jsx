@@ -33,7 +33,7 @@ function NavComponent() {
                 </a>
                 <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div className="bg-white py-2 collapse-inner rounded">
-                        <a className="collapse-item" href="buttons.html">Add User</a>
+                        <Link className="collapse-item" to="/add-users">Add User</Link>
                         <Link className="collapse-item" to="/user-list">User List</Link>
                     </div>
                 </div>
